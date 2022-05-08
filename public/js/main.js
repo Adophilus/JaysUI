@@ -65,3 +65,26 @@ if (document.getElementById("homeBody")) {
       });
     });
 }
+function CopyCode() {
+  document.getElementById("copy").value =
+    document.getElementById("view").innerHTML;
+  var copyText = document.getElementById("copy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  alert("Copied to clipboard :)");
+}
+function ViewCode() {
+  document.getElementById("copyCode").style.display = "";
+  document.getElementById("showCode").style.display = "none";
+  document.getElementById("view").style.display = "none";
+  document.getElementById("preview").style.display = "";
+  document.getElementById("code").style.display = "";
+}
+function Preview() {
+  document.getElementById("view").style.display = "";
+  document.getElementById("code").style.display = "none";
+  document.getElementById("showCode").style.display = "";
+  document.getElementById("copyCode").style.display = "none";
+  document.getElementById("preview").style.display = "none";
+}
