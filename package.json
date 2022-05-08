@@ -1,16 +1,22 @@
 {
-  "name": "ExSmart",
+  "name": "JaysUI",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "css": "npx tailwindcss -i ./public/css/build.css -o ./public/css/tailwinds.css --watch --minify",
     "start": "nodemon ./index.js",
     "compile": "tsc --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "ui",
+    "free",
+    "open-source"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",

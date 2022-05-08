@@ -4,5 +4,5 @@
     "module": "CommonJS",
     "removeComments": true
   },
-  "include": ["./routes/*.ts", "./*.ts", "./handler/*.ts"]
+  "include": ["./routes/*.ts", "./*.ts", "./handler/*.ts", "src/index.ts"]
 }
