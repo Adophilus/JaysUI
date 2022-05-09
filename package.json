@@ -2,7 +2,7 @@
   "name": "JaysUI",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "css": "npx tailwindcss -i ./public/css/build.css -o ./public/css/tailwinds.css --watch --minify",
     "start": "nodemon ./index.js",
