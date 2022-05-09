@@ -22,9 +22,13 @@ if (document.getElementById("homeBody")) {
     .then((data) => {
       data.Data = data.Data || [];
       data.Data.forEach((catos) => {
-        document.body.innerHTML += `    <div id="${catos}__constructor" class="mb-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-5 px-5 mt-10">\
-      <h1 class="capitalize text-gray-100 col-span-4 font-bold text-2xl"> ${catos}</h1>
-      </div>`;
+        document.body.innerHTML += `
+        <div class="px-5 mt-8" id="${catos}__constructor__main">
+         <div class=""><h1 class="capitalize m-4 text-gray-100 font-bold text-2xl"> ${catos}</h1></div>
+         <div id="${catos}__constructor" class='mb-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-5 px-5 mt-4'>
+         
+         </div>
+        </div>`;
         fetch(`/components/all/${catos}`)
           .then((response) => response.json())
           .then((data) => {
@@ -58,7 +62,7 @@ if (document.getElementById("homeBody")) {
         `;
                 });
               } else {
-                document.getElementById(`${catos}__constructor`).remove();
+                document.getElementById(`${catos}__constructor__main`).remove();
               }
             }
           });
